@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/fastred/SloppySwiper/blob/master/LICENSE)
 [![CocoaPods](https://img.shields.io/cocoapods/v/SloppySwiper.svg?style=flat)](https://github.com/fastred/SloppySwiper)
 
-`SloppySwiper` is a `UINavigationControllerDelegate` subclass that allows swipe back gesture to be started from anywhere on the screen (not only from the left edge).
+`SloppySwiper` is a `UINavigationController` delegate that allows swipe back gesture to be started from anywhere on the screen (not only from the left edge).
 
 ### Notes:
 * the library recreates the default pop animation, so it doesn't look exactly the same as when `interactivePopGestureRecognizer` is used:
