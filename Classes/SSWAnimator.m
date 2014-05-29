@@ -28,10 +28,12 @@
     CGFloat toViewControllerXTranslation = - CGRectGetWidth([transitionContext containerView].bounds) * 0.3f;
     toViewController.view.transform = CGAffineTransformMakeTranslation(toViewControllerXTranslation, 0);
 
-    CGFloat pathWidth = 4.0f;
-    CGFloat pathHeight = CGRectGetHeight(fromViewController.view.frame);
-    CGRect pathRect = CGRectMake(-pathWidth, 0, pathWidth, pathHeight);
-    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:pathRect];
+    // add a shadow on the left side of the frontmost view controller
+    CGFloat shadowWidth = 4.0f;
+    CGFloat shadowVerticalPadding = -20.0f; // negative padding, so the shadow isn't rounded near the top and the bottom
+    CGFloat shadowHeight = CGRectGetHeight(fromViewController.view.frame) - 2 * shadowVerticalPadding;
+    CGRect shadowRect = CGRectMake(-shadowWidth, shadowVerticalPadding, shadowWidth, shadowHeight);
+    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:shadowRect];
     fromViewController.view.layer.shadowPath = [shadowPath CGPath];
     fromViewController.view.layer.shadowOpacity = 0.2f;
     fromViewController.view.clipsToBounds = NO;
