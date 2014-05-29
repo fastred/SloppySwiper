@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		146AA09499CB4FC6ABD4EA97 /* libPods-SloppySwiperExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C35420AFFDBA4562A96B6D58 /* libPods-SloppySwiperExample.a */; };
+		A6C429501937ABD10095C38C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C4294F1937ABD10095C38C /* Foundation.framework */; };
+		A6C429521937ABD10095C38C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C429511937ABD10095C38C /* CoreGraphics.framework */; };
+		A6C429541937ABD10095C38C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C429531937ABD10095C38C /* UIKit.framework */; };
+		A6C4295A1937ABD10095C38C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6C429581937ABD10095C38C /* InfoPlist.strings */; };
+		A6C4295C1937ABD10095C38C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4295B1937ABD10095C38C /* main.m */; };
+		A6C429601937ABD10095C38C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4295F1937ABD10095C38C /* AppDelegate.m */; };
+		A6C429631937ABD10095C38C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C429611937ABD10095C38C /* Main.storyboard */; };
+		A6C429661937ABD10095C38C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C429651937ABD10095C38C /* ViewController.m */; };
+		A6C429681937ABD10095C38C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C429671937ABD10095C38C /* Images.xcassets */; };
+		A6C4296F1937ABD10095C38C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C4296E1937ABD10095C38C /* XCTest.framework */; };
+		A6C429701937ABD10095C38C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C4294F1937ABD10095C38C /* Foundation.framework */; };
+		A6C429711937ABD10095C38C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C429531937ABD10095C38C /* UIKit.framework */; };
+		A6C429791937ABD10095C38C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6C429771937ABD10095C38C /* InfoPlist.strings */; };
+		A6C4297B1937ABD10095C38C /* SloppySwiperExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4297A1937ABD10095C38C /* SloppySwiperExampleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6C429721937ABD10095C38C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6C429441937ABD10095C38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6C4294B1937ABD10095C38C;
+			remoteInfo = SloppySwiperExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A24A601F19FD4AAB98CAC274 /* Pods-SloppySwiperExample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SloppySwiperExample.xcconfig"; path = "Pods/Pods-SloppySwiperExample.xcconfig"; sourceTree = "<group>"; };
+		A6C4294C1937ABD10095C38C /* SloppySwiperExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SloppySwiperExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C4294F1937ABD10095C38C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A6C429511937ABD10095C38C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A6C429531937ABD10095C38C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A6C429571937ABD10095C38C /* SloppySwiperExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SloppySwiperExample-Info.plist"; sourceTree = "<group>"; };
+		A6C429591937ABD10095C38C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A6C4295B1937ABD10095C38C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6C4295D1937ABD10095C38C /* SloppySwiperExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SloppySwiperExample-Prefix.pch"; sourceTree = "<group>"; };
+		A6C4295E1937ABD10095C38C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A6C4295F1937ABD10095C38C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A6C429621937ABD10095C38C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6C429641937ABD10095C38C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A6C429651937ABD10095C38C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A6C429671937ABD10095C38C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A6C4296D1937ABD10095C38C /* SloppySwiperExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SloppySwiperExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C4296E1937ABD10095C38C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A6C429761937ABD10095C38C /* SloppySwiperExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SloppySwiperExampleTests-Info.plist"; sourceTree = "<group>"; };
+		A6C429781937ABD10095C38C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A6C4297A1937ABD10095C38C /* SloppySwiperExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SloppySwiperExampleTests.m; sourceTree = "<group>"; };
+		C35420AFFDBA4562A96B6D58 /* libPods-SloppySwiperExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SloppySwiperExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6C429491937ABD10095C38C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C429521937ABD10095C38C /* CoreGraphics.framework in Frameworks */,
+				A6C429541937ABD10095C38C /* UIKit.framework in Frameworks */,
+				A6C429501937ABD10095C38C /* Foundation.framework in Frameworks */,
+				146AA09499CB4FC6ABD4EA97 /* libPods-SloppySwiperExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C4296A1937ABD10095C38C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C4296F1937ABD10095C38C /* XCTest.framework in Frameworks */,
+				A6C429711937ABD10095C38C /* UIKit.framework in Frameworks */,
+				A6C429701937ABD10095C38C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6C429431937ABD10095C38C = {
+			isa = PBXGroup;
+			children = (
+				A6C429551937ABD10095C38C /* SloppySwiperExample */,
+				A6C429741937ABD10095C38C /* SloppySwiperExampleTests */,
+				A6C4294E1937ABD10095C38C /* Frameworks */,
+				A6C4294D1937ABD10095C38C /* Products */,
+				A24A601F19FD4AAB98CAC274 /* Pods-SloppySwiperExample.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		A6C4294D1937ABD10095C38C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6C4294C1937ABD10095C38C /* SloppySwiperExample.app */,
+				A6C4296D1937ABD10095C38C /* SloppySwiperExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6C4294E1937ABD10095C38C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6C4294F1937ABD10095C38C /* Foundation.framework */,
+				A6C429511937ABD10095C38C /* CoreGraphics.framework */,
+				A6C429531937ABD10095C38C /* UIKit.framework */,
+				A6C4296E1937ABD10095C38C /* XCTest.framework */,
+				C35420AFFDBA4562A96B6D58 /* libPods-SloppySwiperExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6C429551937ABD10095C38C /* SloppySwiperExample */ = {
+			isa = PBXGroup;
+			children = (
+				A6C4295E1937ABD10095C38C /* AppDelegate.h */,
+				A6C4295F1937ABD10095C38C /* AppDelegate.m */,
+				A6C429611937ABD10095C38C /* Main.storyboard */,
+				A6C429641937ABD10095C38C /* ViewController.h */,
+				A6C429651937ABD10095C38C /* ViewController.m */,
+				A6C429671937ABD10095C38C /* Images.xcassets */,
+				A6C429561937ABD10095C38C /* Supporting Files */,
+			);
+			path = SloppySwiperExample;
+			sourceTree = "<group>";
+		};
+		A6C429561937ABD10095C38C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6C429571937ABD10095C38C /* SloppySwiperExample-Info.plist */,
+				A6C429581937ABD10095C38C /* InfoPlist.strings */,
+				A6C4295B1937ABD10095C38C /* main.m */,
+				A6C4295D1937ABD10095C38C /* SloppySwiperExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6C429741937ABD10095C38C /* SloppySwiperExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				A6C4297A1937ABD10095C38C /* SloppySwiperExampleTests.m */,
+				A6C429751937ABD10095C38C /* Supporting Files */,
+			);
+			path = SloppySwiperExampleTests;
+			sourceTree = "<group>";
+		};
+		A6C429751937ABD10095C38C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6C429761937ABD10095C38C /* SloppySwiperExampleTests-Info.plist */,
+				A6C429771937ABD10095C38C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6C4294B1937ABD10095C38C /* SloppySwiperExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6C4297E1937ABD10095C38C /* Build configuration list for PBXNativeTarget "SloppySwiperExample" */;
+			buildPhases = (
+				E2004F5DA7614AFC872B53A7 /* Check Pods Manifest.lock */,
+				A6C429481937ABD10095C38C /* Sources */,
+				A6C429491937ABD10095C38C /* Frameworks */,
+				A6C4294A1937ABD10095C38C /* Resources */,
+				81F342C3F41746B5A80E3E6E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SloppySwiperExample;
+			productName = SloppySwiperExample;
+			productReference = A6C4294C1937ABD10095C38C /* SloppySwiperExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A6C4296C1937ABD10095C38C /* SloppySwiperExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6C429811937ABD10095C38C /* Build configuration list for PBXNativeTarget "SloppySwiperExampleTests" */;
+			buildPhases = (
+				A6C429691937ABD10095C38C /* Sources */,
+				A6C4296A1937ABD10095C38C /* Frameworks */,
+				A6C4296B1937ABD10095C38C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6C429731937ABD10095C38C /* PBXTargetDependency */,
+			);
+			name = SloppySwiperExampleTests;
+			productName = SloppySwiperExampleTests;
+			productReference = A6C4296D1937ABD10095C38C /* SloppySwiperExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6C429441937ABD10095C38C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Arkadiusz Holko";
+				TargetAttributes = {
+					A6C4296C1937ABD10095C38C = {
+						TestTargetID = A6C4294B1937ABD10095C38C;
+					};
+				};
+			};
+			buildConfigurationList = A6C429471937ABD10095C38C /* Build configuration list for PBXProject "SloppySwiperExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A6C429431937ABD10095C38C;
+			productRefGroup = A6C4294D1937ABD10095C38C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6C4294B1937ABD10095C38C /* SloppySwiperExample */,
+				A6C4296C1937ABD10095C38C /* SloppySwiperExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6C4294A1937ABD10095C38C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C429681937ABD10095C38C /* Images.xcassets in Resources */,
+				A6C4295A1937ABD10095C38C /* InfoPlist.strings in Resources */,
+				A6C429631937ABD10095C38C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C4296B1937ABD10095C38C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C429791937ABD10095C38C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81F342C3F41746B5A80E3E6E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-SloppySwiperExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2004F5DA7614AFC872B53A7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6C429481937ABD10095C38C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C429661937ABD10095C38C /* ViewController.m in Sources */,
+				A6C429601937ABD10095C38C /* AppDelegate.m in Sources */,
+				A6C4295C1937ABD10095C38C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C429691937ABD10095C38C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C4297B1937ABD10095C38C /* SloppySwiperExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6C429731937ABD10095C38C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6C4294B1937ABD10095C38C /* SloppySwiperExample */;
+			targetProxy = A6C429721937ABD10095C38C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A6C429581937ABD10095C38C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6C429591937ABD10095C38C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A6C429611937ABD10095C38C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6C429621937ABD10095C38C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A6C429771937ABD10095C38C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6C429781937ABD10095C38C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6C4297C1937ABD10095C38C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A6C4297D1937ABD10095C38C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6C4297F1937ABD10095C38C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A24A601F19FD4AAB98CAC274 /* Pods-SloppySwiperExample.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SloppySwiperExample/SloppySwiperExample-Prefix.pch";
+				INFOPLIST_FILE = "SloppySwiperExample/SloppySwiperExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A6C429801937ABD10095C38C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A24A601F19FD4AAB98CAC274 /* Pods-SloppySwiperExample.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SloppySwiperExample/SloppySwiperExample-Prefix.pch";
+				INFOPLIST_FILE = "SloppySwiperExample/SloppySwiperExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A6C429821937ABD10095C38C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SloppySwiperExample.app/SloppySwiperExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SloppySwiperExample/SloppySwiperExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SloppySwiperExampleTests/SloppySwiperExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A6C429831937ABD10095C38C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SloppySwiperExample.app/SloppySwiperExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SloppySwiperExample/SloppySwiperExample-Prefix.pch";
+				INFOPLIST_FILE = "SloppySwiperExampleTests/SloppySwiperExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6C429471937ABD10095C38C /* Build configuration list for PBXProject "SloppySwiperExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C4297C1937ABD10095C38C /* Debug */,
+				A6C4297D1937ABD10095C38C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6C4297E1937ABD10095C38C /* Build configuration list for PBXNativeTarget "SloppySwiperExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C4297F1937ABD10095C38C /* Debug */,
+				A6C429801937ABD10095C38C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6C429811937ABD10095C38C /* Build configuration list for PBXNativeTarget "SloppySwiperExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6C429821937ABD10095C38C /* Debug */,
+				A6C429831937ABD10095C38C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A6C429441937ABD10095C38C /* Project object */;
+}
