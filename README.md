@@ -25,3 +25,9 @@ Arkadiusz Holko, fastred@fastred.org
 
 SloppySwiper is available under the MIT license. See the LICENSE file for more info.
 
+## Credits
+
+I'd like to thank:
+
+* [@chriseidhof](https://github.com/chriseidhof) for writing [View Controller Transitions](http://www.objc.io/issue-5/view-controller-transitions.html), which parts of I've used in this library
+* Joshua Ginter for writing [Sloppy Swiping](http://www.thenewsprint.co/2014/04/16/sloppy-swiping/)
