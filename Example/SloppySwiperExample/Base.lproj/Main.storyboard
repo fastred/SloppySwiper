@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - First-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -25,7 +25,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hh6-wD-vsS" kind="push" id="LwG-M2-ygu"/>
+                                    <segue destination="vXZ-lx-hvc" kind="push" id="cdb-sK-cRk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -35,43 +35,11 @@
                             <constraint firstAttribute="centerX" secondItem="7I7-bD-Sf9" secondAttribute="centerX" constant="-0.5" id="UPQ-fo-LuN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="First" id="GWq-HT-TWG"/>
+                    <navigationItem key="navigationItem" id="GWq-HT-TWG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="663" y="138"/>
-        </scene>
-        <!--View Controller - Second-->
-        <scene sceneID="QXF-Yw-G8e">
-            <objects>
-                <viewController id="Hh6-wD-vsS" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sbg-BC-EDz"/>
-                        <viewControllerLayoutGuide type="bottom" id="Yaq-3E-RL0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PRI-bo-HrY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTU-48-nzW">
-                                <rect key="frame" x="143" y="273" width="34" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.92110057860000005" green="0.92913087689999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="KTU-48-nzW" secondAttribute="centerY" id="VYH-Vu-Efo"/>
-                            <constraint firstAttribute="centerX" secondItem="KTU-48-nzW" secondAttribute="centerX" id="n7W-Nb-5tN"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Second" id="hbH-rV-1HB"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OMW-Sa-KcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1097" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hJd-2k-VKa">
@@ -103,4 +71,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="JhI-rw-Zo6"/>
+    </inferredMetricsTieBreakers>
 </document>
