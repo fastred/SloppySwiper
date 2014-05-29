@@ -18,7 +18,7 @@
 
 ## Usage
 
-`SloppySwiper` can be used either in the Interface Builder or in code. The IB usage is presented in the example project (see `Navigation Controller Scene` in `Main.storyboard`). You can set it up programmatically as follows:
+`SloppySwiper` can be set either in the Interface Builder or in code. The IB usage is presented in the example project (see `Navigation Controller Scene` in `Main.storyboard`). You can set it up programmatically as follows:
 
     #import "SloppySwiper.h"
     ...
@@ -42,10 +42,6 @@ SloppySwiper is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
     pod "SloppySwiper"
-
-## Author
-
-Arkadiusz Holko
 
 ## License
 
