@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "Arkadiusz Holko" => "fastred@fastred.org" }
   s.social_media_url = "https://twitter.com/arekholko"
-  s.source           = { :git => "http://github.com/fastred/SloppySwiper.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/fastred/SloppySwiper.git", :tag => s.version.to_s }
   s.platform     = :ios, '7.0'
   s.ios.deployment_target = '7.0'
   s.requires_arc = true
