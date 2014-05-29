@@ -14,8 +14,8 @@
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
 {
-    // approximated length of the built-in gesture
-    return 0.25f;
+    // approximated length of the default animation
+    return 0.3f;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
