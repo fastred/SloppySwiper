@@ -1,14 +1,38 @@
 # SloppySwiper
 
-[![Version](https://img.shields.io/cocoapods/v/SloppySwiper.svg?style=flat)](http://cocoadocs.org/docsets/SloppySwiper)
-[![License](https://img.shields.io/cocoapods/l/SloppySwiper.svg?style=flat)](http://cocoadocs.org/docsets/SloppySwiper)
-[![Platform](https://img.shields.io/cocoapods/p/SloppySwiper.svg?style=flat)](http://cocoadocs.org/docsets/SloppySwiper)
+[![Twitter: @arekholko](https://img.shields.io/badge/contact-@arekholko-red.svg?style=flat)](https://twitter.com/arekholko)
+[![License: MIT](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/fastred/SloppySwiper/blob/master/LICENSE)
+[![CocoaPods](https://img.shields.io/cocoapods/v/SloppySwiper.svg?style=flat)](https://github.com/fastred/SloppySwiper)
+
+`SloppySwiper` is a `UINavigationControllerDelegate` subclass that allows swipe back gesture to be started from anywhere on the screen (not only from the left edge).
+
+### Notes:
+* the library recreates the default pop animation, so it doesn't look exactly the same as when `interactivePopGestureRecognizer` is used:
+  - animation curve is a little different
+  - cross dissolve animation is used in the navigation bar (instead of the back button movement)
+  - there's a glitch near the animation's end, but it happens only on the iOS Simulator
+* pan gesture recognizer is used, so it can (and probably will) collide with other gestures
+* it's an experimental code, that I threw together in one evening; I'll gladly accept pull requests with bug fixes and improvements
 
 ## Usage
 
-To run the example project; clone the repo, and run `pod install` from the Example directory first.
+`SloppySwiper` can be used either in the Interface Builder or in code. The IB usage is presented in the example project (see `Navigation Controller Scene` in `Main.storyboard`). You can set it up programmatically as follows:
+
+    #import "SloppySwiper.h"
+    ...
+    @property (strong, nonatomic) SloppySwiper *swiper;
+    ...
+    self.swiper = [[SloppySwiper alloc] initWithNavigationController:navigationController];
+    navigationController.delegate = self.swiper;
+
+## Demo
+
+To run the example project; clone the repo, and run `pod install` from the Example directory first. Alternatively, run ```pod try SloppySwiper``` from the command line.
 
 ## Requirements
+
+* iOS 7
+* ARC
 
 ## Installation
 
@@ -19,7 +43,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Arkadiusz Holko, fastred@fastred.org
+Arkadiusz Holko
 
 ## License
 
