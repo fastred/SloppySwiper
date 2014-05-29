@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "SloppySwiper"
   s.version          = "0.1.0"
-  s.summary          = "UINavigationController's delegate that allows swipe back gesture to be started from anywhere on the screen (not only from the left edge)."
+  s.summary          = "UINavigationControllerDelegate subclass that allows swipe back gesture to be started from anywhere on the screen (not just from the edge)."
   s.homepage         = "https://github.com/fastred/SloppySwiper"
   s.license          = 'MIT'
   s.author           = { "Arkadiusz Holko" => "fastred@fastred.org" }
