@@ -14,6 +14,8 @@
 * pan gesture recognizer is used, so it can (and probably will) collide with other gestures
 * it's an experimental code, that I threw together in one evening; I'll gladly accept pull requests with bug fixes and improvements
 
+![Demo GIF](https://raw.githubusercontent.com/fastred/SloppySwiper/master/demo.gif)
+
 ## Usage
 
 `SloppySwiper` can be used either in the Interface Builder or in code. The IB usage is presented in the example project (see `Navigation Controller Scene` in `Main.storyboard`). You can set it up programmatically as follows:
