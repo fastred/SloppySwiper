@@ -60,6 +60,10 @@
         if (translation.x > 0.0f) { // ignore swipe-left
             CGFloat d = fabs(translation.x / CGRectGetWidth(view.bounds));
             [self.interactionController updateInteractiveTransition:d];
+        } else {
+            // Reset translation if it's negative.
+            // It's done to fix the following case: user pans left, but then decides to pan right - if it's set to 0, then the gesture starts working immediately.
+            [recognizer setTranslation:CGPointZero inView:view];
         }
     } else if (recognizer.state == UIGestureRecognizerStateEnded) {
         if ([recognizer velocityInView:view].x > 0) {
