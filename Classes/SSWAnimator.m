@@ -36,6 +36,8 @@
     UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:shadowRect];
     fromViewController.view.layer.shadowPath = [shadowPath CGPath];
     fromViewController.view.layer.shadowOpacity = 0.2f;
+
+    BOOL previousClipsToBounds = fromViewController.view.clipsToBounds;
     fromViewController.view.clipsToBounds = NO;
 
     // in the default transition the view controller below is a little dimmer than the frontmost one
@@ -51,6 +53,7 @@
     } completion:^(BOOL finished) {
         [dimmingView removeFromSuperview];
         fromViewController.view.transform = CGAffineTransformIdentity;
+        fromViewController.view.clipsToBounds = previousClipsToBounds;
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
 
     }];
