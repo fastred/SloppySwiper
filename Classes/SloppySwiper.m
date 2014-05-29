@@ -37,6 +37,7 @@
 {
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [_navigationController.view addGestureRecognizer:panRecognizer];
+    _panRecognizer = panRecognizer;
 
     _animator = [[SSWAnimator alloc] init];
 }
@@ -76,6 +77,9 @@
 {
     if (operation == UINavigationControllerOperationPop) {
         return self.animator;
+    } else if (operation == UINavigationControllerOperationPush) {
+        // Disables the gesture during the push animation, because trying to pop during the push animation crashes the app.
+        self.panRecognizer.enabled = NO;
     }
     return nil;
 }
@@ -83,6 +87,11 @@
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
 {
     return self.interactionController;
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    self.panRecognizer.enabled = YES;
 }
 
 @end
