@@ -6,6 +6,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SSWAnimator : NSObject
+@interface SSWAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 @end

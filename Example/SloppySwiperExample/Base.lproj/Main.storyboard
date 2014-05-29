@@ -84,10 +84,16 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="LZ9-hm-DUE" id="6g0-L1-iS9"/>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="JhI-rw-Zo6"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56m-sX-LJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="LZ9-hm-DUE" customClass="SloppySwiper">
+                    <connections>
+                        <outlet property="navigationController" destination="qXO-Rf-EKs" id="d9D-X5-M6Q"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="264" y="138"/>
         </scene>

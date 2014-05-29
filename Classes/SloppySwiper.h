@@ -6,6 +6,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SloppySwiper : NSObject
+@interface SloppySwiper : NSObject <UINavigationControllerDelegate>
+
+// Designated initializer if the class isn't set in the Interface Builder.
+- (instancetype)initWithNavigationController:(UINavigationController *)navigationController;
 
 @end
