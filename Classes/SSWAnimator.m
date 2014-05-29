@@ -38,11 +38,18 @@
     fromViewController.view.layer.shadowOpacity = 0.2f;
     fromViewController.view.clipsToBounds = NO;
 
+    // in the default transition the view controller below is a little dimmer than the frontmost one
+    UIView *dimmingView = [[UIView alloc] initWithFrame:toViewController.view.bounds];
+    dimmingView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.1f];
+    [toViewController.view addSubview:dimmingView];
+
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         toViewController.view.transform = CGAffineTransformIdentity;
         fromViewController.view.transform = CGAffineTransformMakeTranslation(toViewController.view.frame.size.width, 0);
+        dimmingView.alpha = 0.0f;
 
     } completion:^(BOOL finished) {
+        [dimmingView removeFromSuperview];
         fromViewController.view.transform = CGAffineTransformIdentity;
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
 
