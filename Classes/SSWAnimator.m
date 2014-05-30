@@ -32,6 +32,7 @@
     return 0.3f;
 }
 
+// Tries to animate a pop transition similarly to the default iOS' pop transition.
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
