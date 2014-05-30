@@ -8,6 +8,7 @@
 #import "SSWAnimator.h"
 
 @interface SloppySwiper()
+@property (weak, readwrite, nonatomic) UIPanGestureRecognizer *panRecognizer;
 @property (weak, nonatomic) IBOutlet UINavigationController *navigationController;
 @property (strong, nonatomic) SSWAnimator *animator;
 @property (strong, nonatomic) UIPercentDrivenInteractiveTransition *interactionController;
