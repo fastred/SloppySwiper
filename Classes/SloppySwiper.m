@@ -16,7 +16,13 @@
 
 @implementation SloppySwiper
 
-#pragma mark - Init
+#pragma mark - Lifecycle
+
+- (void)dealloc
+{
+    [_panRecognizer removeTarget:self action:@selector(pan:)];
+    [_navigationController.view removeGestureRecognizer:_panRecognizer];
+}
 
 - (instancetype)initWithNavigationController:(UINavigationController *)navigationController
 {
