@@ -28,6 +28,8 @@
 
 - (instancetype)initWithNavigationController:(UINavigationController *)navigationController
 {
+    NSCParameterAssert(!!navigationController);
+
     self = [super init];
     if (self) {
         _navigationController = navigationController;
