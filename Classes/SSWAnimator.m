@@ -6,6 +6,20 @@
 
 #import "SSWAnimator.h"
 
+@implementation UIView (TransitionShadow)
+- (void)addLeftSideShadow
+{
+    CGFloat shadowWidth = 4.0f;
+    CGFloat shadowVerticalPadding = -20.0f; // negative padding, so the shadow isn't rounded near the top and the bottom
+    CGFloat shadowHeight = CGRectGetHeight(self.frame) - 2 * shadowVerticalPadding;
+    CGRect shadowRect = CGRectMake(-shadowWidth, shadowVerticalPadding, shadowWidth, shadowHeight);
+    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:shadowRect];
+    self.layer.shadowPath = [shadowPath CGPath];
+    self.layer.shadowOpacity = 0.2f;
+}
+@end
+
+
 @interface SSWAnimator()
 @property (weak, nonatomic) UIViewController *toViewController;
 @end
@@ -29,14 +43,7 @@
     toViewController.view.transform = CGAffineTransformMakeTranslation(toViewControllerXTranslation, 0);
 
     // add a shadow on the left side of the frontmost view controller
-    CGFloat shadowWidth = 4.0f;
-    CGFloat shadowVerticalPadding = -20.0f; // negative padding, so the shadow isn't rounded near the top and the bottom
-    CGFloat shadowHeight = CGRectGetHeight(fromViewController.view.frame) - 2 * shadowVerticalPadding;
-    CGRect shadowRect = CGRectMake(-shadowWidth, shadowVerticalPadding, shadowWidth, shadowHeight);
-    UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:shadowRect];
-    fromViewController.view.layer.shadowPath = [shadowPath CGPath];
-    fromViewController.view.layer.shadowOpacity = 0.2f;
-
+    [fromViewController.view addLeftSideShadow];
     BOOL previousClipsToBounds = fromViewController.view.clipsToBounds;
     fromViewController.view.clipsToBounds = NO;
 
