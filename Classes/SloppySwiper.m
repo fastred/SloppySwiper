@@ -12,6 +12,8 @@
 @property (weak, nonatomic) IBOutlet UINavigationController *navigationController;
 @property (strong, nonatomic) SSWAnimator *animator;
 @property (strong, nonatomic) UIPercentDrivenInteractiveTransition *interactionController;
+/// A Boolean value that indicates whether the navigation controller is currently animating a push/pop operation.
+@property (nonatomic) BOOL duringAnimation;
 @end
 
 @implementation SloppySwiper
@@ -55,7 +57,7 @@
 {
     UIView *view = self.navigationController.view;
     if (recognizer.state == UIGestureRecognizerStateBegan) {
-        if (self.navigationController.viewControllers.count > 1) {
+        if (self.navigationController.viewControllers.count > 1 && !self.duringAnimation) {
             self.interactionController = [[UIPercentDrivenInteractiveTransition alloc] init];
             self.interactionController.completionCurve = UIViewAnimationCurveEaseOut;
 
@@ -77,6 +79,8 @@
             [self.interactionController finishInteractiveTransition];
         } else {
             [self.interactionController cancelInteractiveTransition];
+            // When the transition is cancelled, `navigationController:didShowViewController:animated:` isn't called, so we have to maintain `duringAnimation`'s state here too.
+            self.duringAnimation = NO;
         }
         self.interactionController = nil;
     }
@@ -88,9 +92,6 @@
 {
     if (operation == UINavigationControllerOperationPop) {
         return self.animator;
-    } else if (operation == UINavigationControllerOperationPush) {
-        // Disables the gesture during the push animation, because trying to pop during the push animation crashes the app.
-        self.panRecognizer.enabled = NO;
     }
     return nil;
 }
@@ -100,9 +101,16 @@
     return self.interactionController;
 }
 
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if (animated) {
+        self.duringAnimation = YES;
+    }
+}
+
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    self.panRecognizer.enabled = YES;
+    self.duringAnimation = NO;
 }
 
 @end
