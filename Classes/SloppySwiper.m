@@ -43,7 +43,7 @@
     _animator = [[SSWAnimator alloc] init];
 }
 
-#pragma mark - Pan Gesture Recognizer
+#pragma mark - UIPanGestureRecognizer
 
 - (void)pan:(UIPanGestureRecognizer*)recognizer
 {
