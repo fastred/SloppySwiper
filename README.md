@@ -20,12 +20,14 @@
 
 `SloppySwiper` can be set either in the Interface Builder or in code. The IB usage is presented in the example project (see `Navigation Controller Scene` in `Main.storyboard`). You can set it up programmatically as follows:
 
-    #import "SloppySwiper.h"
-    ...
-    @property (strong, nonatomic) SloppySwiper *swiper;
-    ...
-    self.swiper = [[SloppySwiper alloc] initWithNavigationController:navigationController];
-    navigationController.delegate = self.swiper;
+```obj-c
+#import "SloppySwiper.h"
+...
+@property (strong, nonatomic) SloppySwiper *swiper;
+...
+self.swiper = [[SloppySwiper alloc] initWithNavigationController:navigationController];
+navigationController.delegate = self.swiper;
+```
 
 ## Demo
 
