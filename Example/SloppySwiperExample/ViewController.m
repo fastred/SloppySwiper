@@ -22,7 +22,7 @@
     NSUInteger stackCount = [self.navigationController.viewControllers count];
 
     if (stackCount % 2 == 0) {
-        self.view.backgroundColor = [UIColor colorWithRed:0.921 green:0.929 blue:1.000 alpha:1.000];
+        self.view.backgroundColor = [UIColor colorWithRed:0.921f green:0.929f blue:1.000f alpha:1.000f];
     }
 
     self.title = [@(stackCount) stringValue];
