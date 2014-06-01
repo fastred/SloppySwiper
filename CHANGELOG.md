@@ -1,5 +1,10 @@
 # SloppySwiper CHANGELOG
 
+## 0.1.3
+
+* Uses the animation curve the same as in the default animation
+* Limits `maximumNumberOfTouches` to 1
+
 ## 0.1.2
 
 Add fading of the left-side shadow during animation.
