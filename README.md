@@ -8,7 +8,6 @@
 
 ### Notes:
 * the library recreates the default pop animation, so it doesn't look exactly the same as when `interactivePopGestureRecognizer` is used:
-  - animation curve is a little different
   - cross dissolve animation is used in the navigation bar (instead of the back button movement)
   - there's a glitch near the animation's end, but it happens only on the iOS Simulator
 * pan gesture recognizer is used, so it can (and probably will) collide with other gestures

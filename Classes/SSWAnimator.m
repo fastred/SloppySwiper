@@ -6,6 +6,9 @@
 
 #import "SSWAnimator.h"
 
+UIViewAnimationOptions const SSWNavigationTransitionCurve = 7 << 16;
+
+
 @implementation UIView (TransitionShadow)
 - (void)addLeftSideShadowWithFading
 {
@@ -36,8 +39,8 @@
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
 {
-    // approximated length of the default animation
-    return 0.3f;
+    // Approximated lengths of the default animations.
+    return [transitionContext isInteractive] ? 0.25f : 0.5f;
 }
 
 // Tries to animate a pop transition similarly to the default iOS' pop transition.
@@ -61,7 +64,10 @@
     dimmingView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.1f];
     [toViewController.view addSubview:dimmingView];
 
-    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+    // Uses linear curve for an interactive transition, so the view follows the finger. Otherwise, uses a navigation transition curve.
+    UIViewAnimationOptions curveOption = [transitionContext isInteractive] ? UIViewAnimationOptionCurveLinear : SSWNavigationTransitionCurve;
+
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 options:UIViewAnimationOptionTransitionNone | curveOption animations:^{
         toViewController.view.transform = CGAffineTransformIdentity;
         fromViewController.view.transform = CGAffineTransformMakeTranslation(toViewController.view.frame.size.width, 0);
         dimmingView.alpha = 0.0f;
