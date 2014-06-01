@@ -47,6 +47,7 @@
 - (void)commonInit
 {
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    panRecognizer.maximumNumberOfTouches = 1;
     [_navigationController.view addGestureRecognizer:panRecognizer];
     _panRecognizer = panRecognizer;
 
