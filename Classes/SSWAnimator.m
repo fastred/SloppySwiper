@@ -1,7 +1,7 @@
 //
 //  SSWAnimator.m
 //
-//  Created by Arkadiusz on 29-05-14.
+//  Created by Arkadiusz Holko http://holko.pl on 29-05-14.
 //
 
 #import "SSWAnimator.h"

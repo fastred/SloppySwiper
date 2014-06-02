@@ -1,9 +1,7 @@
 //
 //  SSWDirectionalPanGestureRecognizer.h
-//  Pods
 //
-//  Created by Arkadiusz on 01-06-14.
-//
+//  Created by Arkadiusz Holko http://holko.pl on 01-06-14.
 //
 
 #import <UIKit/UIKit.h>
