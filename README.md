@@ -6,7 +6,7 @@
 
 `SloppySwiper` is a `UINavigationController` delegate that allows swipe back gesture to be started from anywhere on the screen (not only from the left edge).
 
-### Notes:
+### Note
 * the library recreates the default pop animation, so it doesn't look exactly the same as when `interactivePopGestureRecognizer` is used:
   - cross dissolve animation is used in the navigation bar (instead of the back button movement)
   - the animation tends to be glitchy on the iOS Simulator, but it's fine on the device
