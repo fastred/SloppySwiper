@@ -25,13 +25,16 @@
         self.view.backgroundColor = [UIColor colorWithRed:0.921f green:0.929f blue:1.000f alpha:1.000f];
     }
 
-    self.title = [@(stackCount) stringValue];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ((UIViewController *)segue.destinationViewController).hidesBottomBarWhenPushed = YES;
 }
 
 @end
