@@ -6,6 +6,7 @@
 
 #import "SloppySwiper.h"
 #import "SSWAnimator.h"
+#import "SSWDirectionalPanGestureRecognizer.h"
 
 @interface SloppySwiper()
 @property (weak, readwrite, nonatomic) UIPanGestureRecognizer *panRecognizer;
@@ -46,7 +47,8 @@
 
 - (void)commonInit
 {
-    UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    SSWDirectionalPanGestureRecognizer *panRecognizer = [[SSWDirectionalPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
+    panRecognizer.direction = SSWPanDirectionRight;
     panRecognizer.maximumNumberOfTouches = 1;
     [_navigationController.view addGestureRecognizer:panRecognizer];
     _panRecognizer = panRecognizer;
@@ -68,15 +70,9 @@
         }
     } else if (recognizer.state == UIGestureRecognizerStateChanged) {
         CGPoint translation = [recognizer translationInView:view];
-
-        if (translation.x > 0.0f) { // ignore swipe-left
-            CGFloat d = fabs(translation.x / CGRectGetWidth(view.bounds));
-            [self.interactionController updateInteractiveTransition:d];
-        } else {
-            // Reset translation if it's negative.
-            // It's done to fix the following case: user pans left, but then decides to pan right - if it's set to 0, then the gesture starts working immediately.
-            [recognizer setTranslation:CGPointZero inView:view];
-        }
+        // Cumulative translation.x can be less than zero because user can pan slightly to the right and then back to the left.
+        CGFloat d = translation.x > 0 ? translation.x / CGRectGetWidth(view.bounds) : 0;
+        [self.interactionController updateInteractiveTransition:d];
     } else if (recognizer.state == UIGestureRecognizerStateEnded) {
         if ([recognizer velocityInView:view].x > 0) {
             [self.interactionController finishInteractiveTransition];
