@@ -10,6 +10,7 @@
 * the library recreates the default pop animation, so it doesn't look exactly the same as when `interactivePopGestureRecognizer` is used:
   - cross dissolve animation is used in the navigation bar (instead of the back button movement)
   - the animation tends to be glitchy on the iOS Simulator, but it's fine on the device
+  - [`hidesBottomBarWhenPushed` isn't animated properly](https://github.com/fastred/SloppySwiper/issues/2)
 * the gesture can collide with other *pan to the right* gestures
 
 ![Demo GIF](https://raw.githubusercontent.com/fastred/SloppySwiper/master/demo.gif)
