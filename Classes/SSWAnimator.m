@@ -1,7 +1,7 @@
 //
 //  SSWAnimator.m
 //
-//  Created by Arkadiusz Holko http://holko.pl on 29-05-14.
+//  Created by Arkadiusz on 29-05-14.
 //
 
 #import "SSWAnimator.h"
@@ -48,6 +48,9 @@ UIViewAnimationOptions const SSWNavigationTransitionCurve = 7 << 16;
 {
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    
+    [transitionContext containerView].backgroundColor = toViewController.view.backgroundColor;
+    
     [[transitionContext containerView] insertSubview:toViewController.view belowSubview:fromViewController.view];
 
     // parallax effect; the offset matches the one used in the pop animation in iOS 7.1
