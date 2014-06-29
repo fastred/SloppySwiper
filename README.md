@@ -1,6 +1,5 @@
 # SloppySwiper
 
-[![Twitter: @arekholko](https://img.shields.io/badge/contact-@arekholko-red.svg?style=flat)](https://twitter.com/arekholko)
 [![License: MIT](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/fastred/SloppySwiper/blob/master/LICENSE)
 [![CocoaPods](https://img.shields.io/cocoapods/v/SloppySwiper.svg?style=flat)](https://github.com/fastred/SloppySwiper)
 
@@ -44,7 +43,12 @@ it, simply add the following line to your Podfile:
 
     pod "SloppySwiper"
 
+## Author
 
+Arkadiusz Holko:
+
+* [Blog](http://holko.pl/)
+* [@arekholko on Twitter](https://twitter.com/arekholko)
 
 ## Credits
 
