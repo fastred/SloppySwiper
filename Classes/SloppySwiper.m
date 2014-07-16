@@ -110,6 +110,13 @@
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     self.duringAnimation = NO;
+    
+    if (navigationController.viewControllers.count <= 1) {
+        self.panRecognizer.enabled = NO;
+    }
+    else {
+        self.panRecognizer.enabled = YES;
+    }
 }
 
 @end
