@@ -64,6 +64,26 @@ UIViewAnimationOptions const SSWNavigationTransitionCurve = 7 << 16;
     dimmingView.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.1f];
     [toViewController.view addSubview:dimmingView];
 
+    // fix hidesBottomBarWhenPushed not animated properly
+    UITabBarController *tabBarController = toViewController.tabBarController;
+    UINavigationController *navController = toViewController.navigationController;
+    UITabBar *tabBar = tabBarController.tabBar;
+    BOOL shouldAddTabBarBackToTabBarController = NO;
+
+    BOOL tabBarControllerContainsToViewController = [tabBarController.viewControllers containsObject:toViewController];
+    BOOL tabBarControllerContainsNavController = [tabBarController.viewControllers containsObject:navController];
+    BOOL isToViewControllerFirstInNavController = [navController.viewControllers firstObject] == toViewController;
+    if (tabBar && (tabBarControllerContainsToViewController || (isToViewControllerFirstInNavController && tabBarControllerContainsNavController))) {
+        [tabBar.layer removeAllAnimations];
+        
+        CGRect tabBarRect = tabBar.frame;
+        tabBarRect.origin.x = toViewController.view.bounds.origin.x;
+        tabBar.frame = tabBarRect;
+        
+        [toViewController.view addSubview:tabBar];
+        shouldAddTabBarBackToTabBarController = YES;
+    }
+
     // Uses linear curve for an interactive transition, so the view follows the finger. Otherwise, uses a navigation transition curve.
     UIViewAnimationOptions curveOption = [transitionContext isInteractive] ? UIViewAnimationOptionCurveLinear : SSWNavigationTransitionCurve;
 
@@ -73,11 +93,18 @@ UIViewAnimationOptions const SSWNavigationTransitionCurve = 7 << 16;
         dimmingView.alpha = 0.0f;
 
     } completion:^(BOOL finished) {
+        if (shouldAddTabBarBackToTabBarController) {
+            [tabBarController.view addSubview:tabBar];
+            
+            CGRect tabBarRect = tabBar.frame;
+            tabBarRect.origin.x = tabBarController.view.bounds.origin.x;
+            tabBar.frame = tabBarRect;
+        }
+
         [dimmingView removeFromSuperview];
         fromViewController.view.transform = CGAffineTransformIdentity;
         fromViewController.view.clipsToBounds = previousClipsToBounds;
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
-
     }];
 
     self.toViewController = toViewController;
