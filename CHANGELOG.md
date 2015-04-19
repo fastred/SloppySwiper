@@ -1,5 +1,9 @@
 # SloppySwiper CHANGELOG
 
+## 0.4.0
+
+Fixes incorrect animation when hidesBottomBarWhenPushed is used.
+
 ## 0.2.0
 
 Adds a specialized pan gesture recognizer that fails if the panning started in the wrong direction. It minimizes collisions between it and other gesture recognizers.
