@@ -35,7 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A24A601F19FD4AAB98CAC274 /* Pods-SloppySwiperExample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SloppySwiperExample.xcconfig"; path = "Pods/Pods-SloppySwiperExample.xcconfig"; sourceTree = "<group>"; };
+		4E5B982ACB7E0595F0FB294D /* Pods-SloppySwiperExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SloppySwiperExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SloppySwiperExample/Pods-SloppySwiperExample.release.xcconfig"; sourceTree = "<group>"; };
+		6F265703392A043EE0B7751F /* Pods-SloppySwiperExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SloppySwiperExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SloppySwiperExample/Pods-SloppySwiperExample.debug.xcconfig"; sourceTree = "<group>"; };
 		A6C4294C1937ABD10095C38C /* SloppySwiperExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SloppySwiperExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C4294F1937ABD10095C38C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A6C429511937ABD10095C38C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,7 +91,7 @@
 				A6C429741937ABD10095C38C /* SloppySwiperExampleTests */,
 				A6C4294E1937ABD10095C38C /* Frameworks */,
 				A6C4294D1937ABD10095C38C /* Products */,
-				A24A601F19FD4AAB98CAC274 /* Pods-SloppySwiperExample.xcconfig */,
+				CB1FB2B606DDC8ACA8EDDC6D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +157,15 @@
 				A6C429771937ABD10095C38C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB1FB2B606DDC8ACA8EDDC6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F265703392A043EE0B7751F /* Pods-SloppySwiperExample.debug.xcconfig */,
+				4E5B982ACB7E0595F0FB294D /* Pods-SloppySwiperExample.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +275,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-SloppySwiperExample-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SloppySwiperExample/Pods-SloppySwiperExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E2004F5DA7614AFC872B53A7 /* Check Pods Manifest.lock */ = {
@@ -442,7 +452,7 @@
 		};
 		A6C4297F1937ABD10095C38C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A24A601F19FD4AAB98CAC274 /* Pods-SloppySwiperExample.xcconfig */;
+			baseConfigurationReference = 6F265703392A043EE0B7751F /* Pods-SloppySwiperExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -456,7 +466,7 @@
 		};
 		A6C429801937ABD10095C38C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A24A601F19FD4AAB98CAC274 /* Pods-SloppySwiperExample.xcconfig */;
+			baseConfigurationReference = 4E5B982ACB7E0595F0FB294D /* Pods-SloppySwiperExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
