@@ -8,7 +8,7 @@
 #import "SSWAnimator.h"
 #import "SSWDirectionalPanGestureRecognizer.h"
 
-@interface SloppySwiper()
+@interface SloppySwiper() <UIGestureRecognizerDelegate>
 @property (weak, readwrite, nonatomic) UIPanGestureRecognizer *panRecognizer;
 @property (weak, nonatomic) IBOutlet UINavigationController *navigationController;
 @property (strong, nonatomic) SSWAnimator *animator;
@@ -50,6 +50,7 @@
     SSWDirectionalPanGestureRecognizer *panRecognizer = [[SSWDirectionalPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     panRecognizer.direction = SSWPanDirectionRight;
     panRecognizer.maximumNumberOfTouches = 1;
+    panRecognizer.delegate = self;
     [_navigationController.view addGestureRecognizer:panRecognizer];
     _panRecognizer = panRecognizer;
 
@@ -83,6 +84,15 @@
         }
         self.interactionController = nil;
     }
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    if (self.navigationController.viewControllers.count > 1) {
+        return YES;
+    }
+    return NO;
 }
 
 #pragma mark - UINavigationControllerDelegate
