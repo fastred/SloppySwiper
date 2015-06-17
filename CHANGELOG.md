@@ -1,5 +1,9 @@
 # SloppySwiper CHANGELOG
 
+## 0.4.1
+
+Fixes a weird "locking" of the whole view when swiping on the right of the root view controller. This especially happend if this view contained a (subclass of) UIScrollView.
+
 ## 0.4.0
 
 Fixes incorrect animation when hidesBottomBarWhenPushed is used.
