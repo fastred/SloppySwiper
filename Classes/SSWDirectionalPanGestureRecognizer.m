@@ -22,7 +22,7 @@
     CGPoint velocity = [self velocityInView:self.view];
 
     // check direction only on the first move
-    if (!self.dragging) {
+    if (!self.dragging && !CGPointEqualToPoint(velocity, CGPointZero)) {
         NSDictionary *velocities = @{
                                      @(SSWPanDirectionRight) : @(velocity.x),
                                      @(SSWPanDirectionDown) : @(velocity.y),
