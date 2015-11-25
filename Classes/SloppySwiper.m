@@ -127,6 +127,9 @@
     else {
         self.panRecognizer.enabled = YES;
     }
+
+    [self.interactionController finishInteractiveTransition];
+    self.interactionController = nil;
 }
 
 @end
