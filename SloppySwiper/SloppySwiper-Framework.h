@@ -17,4 +17,4 @@ FOUNDATION_EXPORT const unsigned char SloppySwiperVersionString[];
 
 #import <SloppySwiper/SloppySwiper.h>
 #import <SloppySwiper/SSWAnimator.h>
-#import <SloppySiper/SSWDirectionalPanGestureRecognizer.h>
+#import <SloppySwiper/SSWDirectionalPanGestureRecognizer.h>
