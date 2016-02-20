@@ -13,7 +13,7 @@
 		4A4F3F391C79044900284AF4 /* SSWAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F3F331C79044900284AF4 /* SSWAnimator.m */; };
 		4A4F3F3A1C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4F3F341C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A4F3F3B1C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F3F351C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.m */; };
-		4A4F3F551C7905D400284AF4 /* SloppySwiper-Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4F3F531C7905D400284AF4 /* SloppySwiper-Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A4F3F551C7905D400284AF4 /* SloppySwiperFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4F3F531C7905D400284AF4 /* SloppySwiperFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		4A4F3F341C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSWDirectionalPanGestureRecognizer.h; path = Classes/SSWDirectionalPanGestureRecognizer.h; sourceTree = "<group>"; };
 		4A4F3F351C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSWDirectionalPanGestureRecognizer.m; path = Classes/SSWDirectionalPanGestureRecognizer.m; sourceTree = "<group>"; };
 		4A4F3F521C7905D400284AF4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SloppySwiper/Info.plist; sourceTree = "<group>"; };
-		4A4F3F531C7905D400284AF4 /* SloppySwiper-Framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SloppySwiper-Framework.h"; path = "SloppySwiper/SloppySwiper-Framework.h"; sourceTree = "<group>"; };
+		4A4F3F531C7905D400284AF4 /* SloppySwiperFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SloppySwiperFramework.h; path = SloppySwiper/SloppySwiperFramework.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				4A4F3F521C7905D400284AF4 /* Info.plist */,
-				4A4F3F531C7905D400284AF4 /* SloppySwiper-Framework.h */,
+				4A4F3F531C7905D400284AF4 /* SloppySwiperFramework.h */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			files = (
 				4A4F3F3A1C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.h in Headers */,
 				4A4F3F361C79044900284AF4 /* SloppySwiper.h in Headers */,
-				4A4F3F551C7905D400284AF4 /* SloppySwiper-Framework.h in Headers */,
+				4A4F3F551C7905D400284AF4 /* SloppySwiperFramework.h in Headers */,
 				4A4F3F381C79044900284AF4 /* SSWAnimator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
