@@ -8,10 +8,10 @@
 #import <UIKit/UIKit.h>
 
 //! Project version number for SloppySwiper.
-FOUNDATION_EXPORT double SloppySwiperFrameworkVersionNumber;
+FOUNDATION_EXPORT double SloppySwiperVersionNumber;
 
 //! Project version string for SloppySwiper.
-FOUNDATION_EXPORT const unsigned char SloppySwiperFrameworkVersionString[];
+FOUNDATION_EXPORT const unsigned char SloppySwiperVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SloppySwiper/PublicHeader.h>
 
