@@ -5,6 +5,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 // Undocumented animation curve used for the navigation controller's transition.
 FOUNDATION_EXPORT UIViewAnimationOptions const SSWNavigationTransitionCurve;
