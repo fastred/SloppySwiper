@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A4F3F361C79044900284AF4 /* SloppySwiper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4F3F301C79044900284AF4 /* SloppySwiper.h */; };
+		4A4F3F361C79044900284AF4 /* SloppySwiper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4F3F301C79044900284AF4 /* SloppySwiper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A4F3F371C79044900284AF4 /* SloppySwiper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F3F311C79044900284AF4 /* SloppySwiper.m */; };
-		4A4F3F381C79044900284AF4 /* SSWAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4F3F321C79044900284AF4 /* SSWAnimator.h */; };
+		4A4F3F381C79044900284AF4 /* SSWAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4F3F321C79044900284AF4 /* SSWAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A4F3F391C79044900284AF4 /* SSWAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F3F331C79044900284AF4 /* SSWAnimator.m */; };
-		4A4F3F3A1C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4F3F341C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.h */; };
+		4A4F3F3A1C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4F3F341C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A4F3F3B1C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F3F351C79044900284AF4 /* SSWDirectionalPanGestureRecognizer.m */; };
 		4A4F3F551C7905D400284AF4 /* SloppySwiper-Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4F3F531C7905D400284AF4 /* SloppySwiper-Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
