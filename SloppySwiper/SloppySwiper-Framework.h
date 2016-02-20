@@ -16,5 +16,3 @@ FOUNDATION_EXPORT const unsigned char SloppySwiperVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <SloppySwiper/PublicHeader.h>
 
 #import "SloppySwiper.h"
-#import "SSWAnimator.h"
-#import "SSWDirectionalPanGestureRecognizer.h"
