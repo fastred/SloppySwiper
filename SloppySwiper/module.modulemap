@@ -1,0 +1,3 @@
+framework module SloppySwiper {
+    umbrella header "SloppySwiperFramework.h"
+}
