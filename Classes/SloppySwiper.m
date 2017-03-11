@@ -8,7 +8,7 @@
 #import "SSWAnimator.h"
 #import "SSWDirectionalPanGestureRecognizer.h"
 
-@interface SloppySwiper() <UIGestureRecognizerDelegate>
+@interface SloppySwiper() <UIGestureRecognizerDelegate, SSWAnimatorDelegate>
 @property (weak, readwrite, nonatomic) UIPanGestureRecognizer *panRecognizer;
 @property (weak, nonatomic) IBOutlet UINavigationController *navigationController;
 @property (strong, nonatomic) SSWAnimator *animator;
@@ -42,6 +42,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     [self commonInit];
 }
 
@@ -55,6 +56,25 @@
     _panRecognizer = panRecognizer;
 
     _animator = [[SSWAnimator alloc] init];
+    _animator.delegate = self;
+}
+
+#pragma mark - SSWAnimatorDelegate
+
+- (BOOL)animatorShouldAnimateTabBar:(SSWAnimator *)animator {
+    if ([self.delegate respondsToSelector:@selector(sloppySwiperShouldAnimateTabBar:)]) {
+        return [self.delegate sloppySwiperShouldAnimateTabBar:self];
+    } else {
+        return YES;
+    }
+}
+
+- (CGFloat)animatorTransitionDimAmount:(SSWAnimator *)animator {
+    if ([self.delegate respondsToSelector:@selector(sloppySwiperTransitionDimAmount:)]) {
+        return [self.delegate sloppySwiperTransitionDimAmount:self];
+    } else {
+        return 0.1f;
+    }
 }
 
 #pragma mark - UIPanGestureRecognizer

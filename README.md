@@ -11,6 +11,10 @@
   - the animation tends to be glitchy on the iOS Simulator, but it's fine on the device
   - [`hidesBottomBarWhenPushed` isn't animated properly](https://github.com/fastred/SloppySwiper/issues/2)
 * the gesture can collide with other *pan to the right* gestures
+* If you're having problems with a UINavigationController inside of
+  a UITabBarController that is causing the UITabBar to pop out of view during the animation process,
+  you'll want to implement the SloppySwiperDelegate protocol and return NO for calls to
+  `-(BOOL)sloppySwiperShouldAnimateTabBar:(SloppySwiper *)swiper`.
 
 ![Demo GIF](https://raw.githubusercontent.com/fastred/SloppySwiper/master/demo.gif)
 
