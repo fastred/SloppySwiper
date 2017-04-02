@@ -1,5 +1,9 @@
 # SloppySwiper CHANGELOG
 
+## 0.6
+
+Adds `SloppySwiperDelegate` to fix issues with tab bars.
+
 ## 0.5
 
 Adds support for 3D Touch.
