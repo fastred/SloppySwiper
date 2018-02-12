@@ -53,7 +53,13 @@ UIViewAnimationOptions const SSWNavigationTransitionCurve = 7 << 16;
     // parallax effect; the offset matches the one used in the pop animation in iOS 7.1
     CGFloat toViewControllerXTranslation = - CGRectGetWidth([transitionContext containerView].bounds) * 0.3f;
     toViewController.view.bounds = [transitionContext containerView].bounds;
-    toViewController.view.center = [transitionContext containerView].center;
+    //Extra offset if the navigation controller is inside a tabbar controller
+    CGFloat yCenterOffset = 0;
+    if (toViewController.tabBarController != nil) {
+        yCenterOffset = CGRectGetMaxY(toViewController.navigationController.navigationBar.frame);
+    }
+    
+    toViewController.view.center = CGPointMake([transitionContext containerView].center.x, [transitionContext containerView].center.y + yCenterOffset);    
     toViewController.view.transform = CGAffineTransformMakeTranslation(toViewControllerXTranslation, 0);
 
     // add a shadow on the left side of the frontmost view controller
