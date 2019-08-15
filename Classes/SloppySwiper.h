@@ -13,7 +13,7 @@
 
 @class SloppySwiper;
 
-@protocol SloppySwiperDelegate <NSObject>
+@protocol SloppySwiperDelegate <NSObject, UINavigationControllerDelegate>
 
 @optional
 // Return NO when you don't want the TabBar to animate during swiping. (Default YES)

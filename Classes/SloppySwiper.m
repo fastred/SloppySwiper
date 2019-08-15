@@ -122,6 +122,9 @@
     if (operation == UINavigationControllerOperationPop) {
         return self.animator;
     }
+    if ([self.delegate respondsToSelector:@selector(navigationController:animationControllerForOperation:fromViewController:toViewController:)]) {
+        return [self.delegate navigationController:navigationController animationControllerForOperation:operation fromViewController:fromVC toViewController:toVC];
+    }
     return nil;
 }
 
@@ -135,6 +138,10 @@
     if (animated) {
         self.duringAnimation = YES;
     }
+    
+    if ([self.delegate respondsToSelector:@selector(navigationController:willShowViewController:animated:)]) {
+        [self.delegate navigationController:navigationController willShowViewController:viewController animated:animated];
+    }
 }
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -147,6 +154,24 @@
     else {
         self.panRecognizer.enabled = YES;
     }
+    
+    if ([self.delegate respondsToSelector:@selector(navigationController:didShowViewController:animated:)]) {
+        [self.delegate navigationController:navigationController didShowViewController:viewController animated:animated];
+    }
+}
+
+- (UIInterfaceOrientationMask)navigationControllerSupportedInterfaceOrientations:(UINavigationController *)navigationController {
+    if ([self.delegate respondsToSelector:@selector(navigationControllerSupportedInterfaceOrientations:)]) {
+        return [self.delegate navigationControllerSupportedInterfaceOrientations:navigationController];
+    }
+    return navigationController.supportedInterfaceOrientations;
+}
+
+- (UIInterfaceOrientation)navigationControllerPreferredInterfaceOrientationForPresentation:(UINavigationController *)navigationController {
+    if ([self.delegate respondsToSelector:@selector(navigationControllerPreferredInterfaceOrientationForPresentation:)]) {
+        return [self.delegate navigationControllerPreferredInterfaceOrientationForPresentation:navigationController];
+    }
+    return navigationController.preferredInterfaceOrientationForPresentation;
 }
 
 @end
