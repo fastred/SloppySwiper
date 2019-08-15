@@ -117,6 +117,17 @@
 
 #pragma mark - UINavigationControllerDelegate
 
+- (BOOL)respondsToSelector:(SEL)selector {
+    SEL interfaceOrientationsSelector = @selector(navigationControllerSupportedInterfaceOrientations:);
+    SEL interfaceOrientationsForPresentationSelector = @selector(navigationControllerPreferredInterfaceOrientationForPresentation:);
+    
+    // Only use these delegate methods if they can be forwarded
+    if (selector == interfaceOrientationsSelector || selector == interfaceOrientationsForPresentationSelector) {
+        return [self.delegate respondsToSelector:selector];
+    }
+    return [super respondsToSelector:selector];
+}
+
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
 {
     if (operation == UINavigationControllerOperationPop) {
